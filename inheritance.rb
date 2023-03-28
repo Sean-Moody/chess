@@ -1,3 +1,5 @@
+require 'byebug'
+
 class Employee
 
     def initialize(name, title, salary, boss = nil)
@@ -5,6 +7,9 @@ class Employee
         @title = title
         @salary = salary
         @boss = boss
+        if boss
+            @boss.employees << self
+        end
     end
 
     def bonus(multiplier)
@@ -28,7 +33,23 @@ class Manager < Employee
     end
 
     def bonus(multiplier)
+        multiplier * total_employee_salary_sum
+    end
+
+    def total_employee_salary_sum
         
+        count = 0 #  if employees.nil?
+debugger
+        self.employees.each do |emp|
+            debugger
+            if emp.is_a?(Manager)
+                # debugger
+                count += emp.total_employee_salary_sum
+            else
+                count += emp.salary
+            end
+        end
+        count
     end
 
     def employee=(subordinate)
