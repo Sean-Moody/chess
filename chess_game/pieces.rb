@@ -3,7 +3,12 @@ class Piece
         # @pos = pos
         # @color = color
         # @board = Board
+        # @moves = []
 
+    end
+
+    def moves
+        #calls the module for the subclass piece type and puts it into instance variable
     end
 end
 
