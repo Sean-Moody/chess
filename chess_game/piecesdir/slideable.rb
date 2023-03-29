@@ -28,6 +28,12 @@ module Slideable
   
     # should return an array of places a Piece can move to
     def moves
+      moves_array = []
+      valid_moves = []
+
+      
+
+
       # create array to collect moves
   
       # iterate over each of the directions in which a slideable piece can move
@@ -46,12 +52,14 @@ module Slideable
       raise NotImplementedError
     end
   
-
+     #                              1 , 0
     def grow_unblocked_moves_in_dir(dx, dy)
       # create an array to collect moves
-  
+      all_moves = []
       # get the piece's current row and current column
-  
+
+      row, col = self.pos
+
       # in a loop:
         # continually increment the piece's current row and current column to generate a new position
         # stop looping if the new position is invalid (not on the board); the piece can't move in this direction
