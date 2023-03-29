@@ -4,7 +4,7 @@ class Board
     attr_reader :rows
     def initialize
         @rows = Array.new(8) {Array.new(8) {[nil]}}
-        @rows[0] = Array.new(8) {Piece.new()} 
+        @rows[0] = Array.new(8) {Piece.new} 
         @rows[1] = Array.new(8) {Piece.new}
         @rows[6] = Array.new(8) {Piece.new}
         @rows[7] = Array.new(8) {Piece.new}
