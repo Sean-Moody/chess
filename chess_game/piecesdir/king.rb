@@ -2,7 +2,7 @@ require_relative 'pieces.rb'
 require_relative 'steppable.rb'
 
 class King < Piece
-
+include Steppable
     def symbol
         :Ki
     end

@@ -1,5 +1,5 @@
 
-module steppable
+module Steppable
 
     def moves
         possible_moves = []
