@@ -7,15 +7,3 @@ class Piece
     end
 end
 
-# class SlidingPiece < Piece
-# end
-
-# class SteppingPiece < Piece
-# end
-
-# class NullPiece < Piece
-# end
-
-# class Pawn < Piece
-
-# end
